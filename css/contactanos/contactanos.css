@@ -1,0 +1,244 @@
+.general {
+    margin-top: 5em;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.primerFieldset {
+    display: grid;
+    gap: 4em;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    width: 870px;
+    padding: 2em;
+}
+a {
+    text-decoration: none;
+    color: black;
+}
+h1 {
+    text-align: center;
+    margin: 1em auto;
+    margin-bottom: 0;
+}
+h2 {
+    text-align: center;
+}
+.redesSociales {
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+}
+.redesSociales i { 
+    font-size: 40px;
+}
+.informacionTrayectos {
+    display: flex;
+    justify-content: center;
+    gap: 4em;
+}
+.textoDatosTrayectos,
+.textoUbicacionMapa {
+    text-align: center;
+}
+#mapa {
+    width: 400px;
+    height: 300px;
+    border-radius: 10px;
+    border: 0;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.6);
+}
+#campoObligatorio {
+    color: red;
+}
+.correoElectronicoAgregado,
+.selectCorreoElectronico,
+.selectTerminacionCorreo {
+    display: flex;
+    gap: 0.5em;
+}
+.campoCorreoElectronico {
+    display: grid;
+    justify-content: center;
+    gap: 1em; 
+    margin-top: 2em;
+    text-align: center;
+}
+#registrarCorreo {
+    padding: 1em;
+    width: 250px;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    background-color: #cad26f;
+    margin-top: 0.5em;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+    margin-bottom: 2em;
+}
+
+/** Textos */
+
+.textoInformacion,
+.textoInformacionRedesSociales,
+.textoSuscripcionCorreos {
+    display: flex;
+    justify-content: center;
+}
+#textoInformacion,
+#textoInformacionRedesSociales,
+#textoSuscripcionCorreos {
+    width: 700px;
+    text-align: center;
+    font-size: 15px;
+}
+.textoInformacionRedesSociales {
+    margin-bottom: 2em;
+}
+
+/** Iconos */
+
+#iconoTelefonoTrayectos,
+#iconoWhatsAppTrayectos,
+#iconoCorreoTrayectos,
+#iconoUbicacionTrayectos {
+    font-size: 22px;
+    margin-right: 0.5em;
+    color: #8ca832;
+}
+#iconoCorreoElectronico {
+    font-size: 20px;
+    margin-top: 0.20em;
+    margin-left: 0.2em;
+}
+#verificacionCorreoElectronico {
+    font-size: 20px;
+    margin-top: 0.20em;
+    margin-right: 0.2em;
+    color: lightgray;
+}
+#labelCorreoElectronico { 
+    text-align: left;
+}
+
+/** Inputs */
+
+.inputCorreoElectronico {
+    display: flex;
+    justify-content: space-between;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 635px;
+    box-shadow: 3px 3px 6px rgba(0, 0, 0, 0.8);
+}
+.inputCorreoElectronico input{
+    width: 280px;
+    height: 22px;
+    margin-top: 0.2em;
+}
+.selectCorreoElectronico label,
+.selectTerminacionCorreo label {
+    font-size: 20px;
+    margin-top: 0.2em;
+}
+.inputCorreoElectronico input,
+.selectCorreoElectronico select,
+.selectTerminacionCorreo select {
+    border: 0;
+}
+.inputCorreoElectronico input:focus,
+.selectCorreoElectronico select:focus,
+.selectTerminacionCorreo select:focus {
+    border: 0;
+    outline: none;
+}
+
+/** Redirecciones: Datos Trayectos */
+
+.redireccionesDatos {
+    display: grid;
+    gap: 2em;
+    margin-top: 3.5em;
+    margin-left: 1em;
+    font-size: 18px;
+}
+.redireccionTelefono,
+.redireccionWhatsApp,
+.redireccionCorreo,
+.redireccionUbicacion {
+    display: flex;
+}
+
+/** Sombreados */
+
+#titulo,
+#tituloInformacion,
+#tituloRedesSociales,
+#tituloDatos,
+#tituloMapa,
+#tituloSuscripcionCorreos,
+#labelTelefonoContacto,
+#labelWhatsAppContacto,
+#labelCorreoContacto,
+#labelUbicacionContacto {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+#labelTelefonoContacto,
+#labelWhatsAppContacto,
+#labelCorreoContacto,
+#labelUbicacionContacto {
+    cursor: pointer;
+}
+#iconoFacebookTrayectos,
+#iconoInstagramTrayectos,
+#iconoTwitterTrayectos,
+#iconoTiktokTrayectos,
+#iconoLinkedInTrayectos,
+#iconoYoutubeTrayectos {
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#iconoCorreoTrayectos,
+#iconoUbicacionTrayectos,
+#iconoWhatsAppTrayectos,
+#iconoTelefonoTrayectos {
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+/** Sombreados al seleccionar */
+
+#iconoFacebookTrayectos:hover,
+#iconoInstagramTrayectos:hover,
+#iconoTwitterTrayectos:hover,
+#iconoTiktokTrayectos:hover,
+#iconoLinkedInTrayectos:hover,
+#iconoYoutubeTrayectos:hover {
+    text-shadow: 4px 4px 7px rgba(0, 0, 0, 0.8);
+}
+#labelTelefonoContacto:hover,
+#labelWhatsAppContacto:hover,
+#labelCorreoContacto:hover,
+#labelUbicacionContacto:hover {
+    text-shadow: 3px 3px 6px rgba(0, 0, 0, 0.7);
+}
+#telefonoContacto:hover,
+#whatsAppContacto:hover,
+#correoContacto:hover,
+#ubicacionContacto:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+#iconoCorreoTrayectos:hover,
+#iconoUbicacionTrayectos:hover,
+#iconoWhatsAppTrayectos:hover,
+#iconoTelefonoTrayectos:hover {
+    text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.6);
+}
+#mapa:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 0.8);
+}
+.inputCorreoElectronico:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
+}
+#registrarCorreo:hover {
+    box-shadow: 5px 5px 8px rgba(0, 0, 0, 1);
+}

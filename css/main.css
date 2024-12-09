@@ -1,0 +1,14 @@
+/** Estilo Main para todas las paginas
+ * ! Mantiene las paginas centradas horizontal y verticalmente
+ */
+
+html, body {
+    font-family: "Merriweather", serif;
+    width: 100%;
+    margin: 0 0;
+    scroll-behavior: smooth;
+}
+
+fieldset { 
+    box-shadow: 8px 8px 8px rgba(0, 0, 0, 0.8);
+}

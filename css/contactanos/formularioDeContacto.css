@@ -1,0 +1,226 @@
+.general {
+    margin-top: 5em;
+    font-size: 14px;
+    display: flex;
+    justify-content: center;
+    gap: 2em;
+    margin-bottom: 4em;
+}
+.formulario {
+    display: grid;
+    gap: 1em;
+}
+.primerFieldset {
+    border: 0.1em solid black;
+    border-radius: 10px;
+    width: 660px;
+    padding: 2em;
+}
+.tituloFieldset h1 {
+    text-align: center;
+    margin-bottom: 2em;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+#campoObligatorio {
+    color: red;
+}
+.campoNombres,
+.campoApellidos,
+.inputsTelefono {
+    display: flex;
+    gap: 1.4em;
+}
+.inputPrimerNombre,
+.inputSegundoNombre,
+.inputPrimerApellido,
+.inputSegundoApellido,
+.inputTelefono,
+.inputCorreoElectronico {
+    display: flex;
+    justify-content: space-between;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    padding: 0.5em;
+    width: 300px;
+}
+.inputTelefono,
+.inputCorreoElectronico {
+    width: 635px;
+}
+.campoPrimerNombre,
+.campoSegundoNombre,
+.campoPrimerApellido,
+.campoSegundoApellido,
+.campoTelefono,
+.campoCorreoElectronico {
+    display: grid;
+    gap: 0.5em;
+}
+.correoElectronicoAgregado,
+.selectCorreoElectronico,
+.selectTerminacionCorreo {
+    display: flex;
+    gap: 0.5em;
+}
+.inputPrimerNombre input,
+.inputSegundoNombre input,
+.inputPrimerApellido input,
+.inputSegundoApellido input,
+.inputTelefono input,
+.inputCorreoElectronico input {
+    width: 220px;
+}
+#prefijoTelefono {
+    width: 250px;
+    height: 27px;
+}
+#inputTelefono {
+    width: 270px;
+    height: 22px;
+    margin-top: 0.2em;
+}
+.inputCorreoElectronico input{
+    width: 280px;
+    height: 22px;
+    margin-top: 0.2em;
+}
+.selectCorreoElectronico label,
+.selectTerminacionCorreo label {
+    font-size: 20px;
+    margin-top: 0.2em;
+}
+.barraProgreso {
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+    margin-top: 0.5em;
+}
+.barrasProgreso {
+    display: flex;
+    gap: 0.5em;
+    margin-top: 0.1em;
+}
+.barrasProgreso button {
+    width: 40px;
+    height: 15px;
+    border: 0.1em solid black;
+    border-radius: 10px;
+}
+.opcionesBotones {
+    display: flex;
+    gap: 1em;
+    margin-bottom: 2em;
+}
+.campoBotonEnviarFormulario,
+.limpiarTodo {
+    display: flex;
+    justify-content: center;
+    margin-top: 1.5em;
+}
+#botonEnviarFormulario {
+    width: 400px;
+    padding: 1em 0;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    background-color: #cad26f;
+}
+#botonLimpiarTodo {
+    padding: 1em 0;
+    width: 235px;
+    border: 0.1em solid black;
+    border-radius: 10px;
+    background-color: #cad26f;
+}
+#iconoPrimerNombre,
+#iconoSegundoNombre,
+#iconoPrimerApellido,
+#iconoSegundoApellido,
+#iconoTelefono,
+#iconoCorreoElectronico {
+    font-size: 20px;
+    margin-top: 0.20em;
+    margin-left: 0.2em;
+    color: #cad26f;
+}
+#verificacionPrimerNombre,
+#verificacionSegundoNombre,
+#VerificacionPrimerApellido,
+#verificacionSegundoApellido,
+#verificacionTelefono,
+#verificacionCorreoElectronico {
+    font-size: 20px;
+    margin-top: 0.20em;
+    margin-right: 0.2em;
+    color: lightgray;
+}
+.inputPrimerNombre input,
+.inputSegundoNombre input,
+.inputPrimerApellido input,
+.inputSegundoApellido input,
+.inputTelefono input,
+.inputCorreoElectronico input,
+.selectCorreoElectronico select,
+.selectTerminacionCorreo select,
+#prefijoTelefono {
+    border: 0;
+}
+.inputPrimerNombre input:focus,
+.inputSegundoNombre input:focus,
+.inputPrimerApellido input:focus,
+.inputSegundoApellido input:focus,
+.inputTelefono input:focus,
+.inputCorreoElectronico input:focus,
+.selectCorreoElectronico select:focus,
+.selectTerminacionCorreo select:focus,
+#prefijoTelefono {
+    border: 0;
+    outline: none;
+}
+
+/** Sombreado */
+
+.inputPrimerNombre,
+.inputSegundoNombre,
+.inputPrimerApellido,
+.inputSegundoApellido,
+.inputTelefono,
+.inputCorreoElectronico {
+    box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.6);
+}
+#labelPrimerNombre,
+#labelSegundoNombre,
+#labelPrimerApellido,
+#labelSegundoApellido,
+#labelTelefono,
+#labelCorreoElectronico {
+    cursor: pointer;
+    text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.3);
+}
+#botonEnviarFormulario,
+#botonLimpiarTodo {
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.6);
+}
+
+/** Sombreado al seleccionar */
+
+.inputPrimerNombre:hover,
+.inputSegundoNombre:hover,
+.inputPrimerApellido:hover,
+.inputSegundoApellido:hover,
+.inputTelefono:hover,
+.inputCorreoElectronico:hover {
+    box-shadow: 4px 4px 6px rgba(0, 0, 0, 0.8);
+}
+#labelPrimerNombre:hover,
+#labelSegundoNombre:hover,
+#labelPrimerApellido:hover,
+#labelSegundoApellido:hover,
+#labelTelefono:hover,
+#labelCorreoElectronico:hover {
+    cursor: pointer;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+#botonEnviarFormulario:hover,
+#botonLimpiarTodo:hover {
+    box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.8);
+}
