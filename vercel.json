@@ -1,5 +1,8 @@
 {
-    "rewrites": [
-      { "source": "/", "destination": "/src/index.html" }
-    ]
+  "rewrites": [
+    { "source": "/", "destination": "/src/index.html" }
+  ],
+  "static": {
+    "include": ["node_modules"]
   }
+}
