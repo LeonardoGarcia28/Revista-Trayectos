@@ -556,7 +556,7 @@ video {
 
 :root,
 [data-theme] {
-  background-color: var(--fallback-b1,oklch(var(--b1)/1));
+  background-color: #f2fffd; /* Color del background de la pagina */
   color: var(--fallback-bc,oklch(var(--bc)/1));
 }
 
@@ -1121,7 +1121,7 @@ html {
   gap: 0.5rem;
   border-radius: var(--rounded-btn, 0.375rem);
   border-color: currentColor;
-  border-color: oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity));
+  border-color: transparent; /** Color de bordeado de boton principal */
   text-decoration-line: none;
   transition-duration: 200ms;
   transition-timing-function: cubic-bezier(0, 0, 0.2, 1);
@@ -1133,7 +1133,7 @@ html {
   --tw-shadow-colored: 0 2px 4px 0 var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
   outline-color: var(--fallback-bc,oklch(var(--bc)/1));
-  background-color: oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity));
+  background-color: #07122c; /** Color de boton principal */
   --tw-bg-opacity: 1;
   --tw-border-opacity: 1;
 }
@@ -1151,6 +1151,10 @@ html {
   padding: 0px;
 }
 
+.textoJustificado {
+  text-align: justify;
+}
+
 :where(.btn:is(input[type="checkbox"])),
 :where(.btn:is(input[type="radio"])) {
   width: auto;
@@ -1165,17 +1169,21 @@ html {
   content: var(--tw-content);
 }
 
+.tarjetaTamaño {
+  width: 850px; /** Tamaño arreglado de las tarjetas */
+}
+
 .card {
   position: relative;
   display: flex;
   flex-direction: column;
   border-radius: var(--rounded-box, 0.5rem);
-  border-color: var(--fallback-bc,oklch(var(--bc)/0.4));
+  border-color: black;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
-  color: var(--fallback-bc,oklch(var(--bc)/0.8));
-  box-shadow: var(--card-shadow, 0px 2px 4px 0px oklch(var(--bs) / 0.26));
+  background-color: transparent; /* Color de las tarjetas */
+  color: black; /* Color de las letras de las tarjetas */
   border-width: var(--card-border, 0px);
+  /** box-shadow: var(--card-shadow, 0px 2px 4px 0px oklch(var(--bs) / 0.26)); */
 }
 
 .card:focus {
@@ -1204,13 +1212,14 @@ html {
   font-size: 1.5rem;
   line-height: 2rem;
   font-weight: 600;
-  color: var(--fallback-bc,oklch(var(--bc)/0.9));
+  color: black; /* Color titulo cards */
 }
 
 .card figure {
   display: flex;
   align-items: center;
   justify-content: center;
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5));
 }
 
 .card.image-full {
@@ -1257,12 +1266,13 @@ html {
 
 .carousel {
   position: relative;
-  min-height: 20rem;
+  min-height: 30rem;
   width: 100%;
   overflow: hidden;
-  border-radius: 1rem;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: white; /** Color de fondo de carousel */
 }
 
 .carousel-body {
@@ -1287,7 +1297,7 @@ html {
   width: 10%;
   align-items: center;
   justify-content: center;
-  color: var(--fallback-bc,oklch(var(--bc)/0.8));
+  color: white; /** Color de flechas para pasar carousel */
 }
 
 @media not all and (min-width: 640px) {
@@ -1333,7 +1343,7 @@ html {
   width: 2.5rem;
   cursor: pointer;
   border-radius: 9999px;
-  background-color: var(--fallback-bc,oklch(var(--bc)/0.25));
+  background-color: white;
 }
 
 .checkbox {
@@ -1370,6 +1380,7 @@ html {
   margin-bottom: 1rem;
   height: 1rem;
   white-space: nowrap;
+  color: black;
 }
 
 .divider::before {
@@ -1379,7 +1390,7 @@ html {
   border-top-width: 1px;
   --tw-content: '';
   content: var(--tw-content);
-  border-color: var(--fallback-bc,oklch(var(--bc)/0.1));
+  border-color: rgb(219, 219, 219);
 }
 
 .divider::after {
@@ -1390,7 +1401,7 @@ html {
   border-top-width: 1px;
   --tw-content: '';
   content: var(--tw-content);
-  border-color: var(--fallback-bc,oklch(var(--bc)/0.1));
+  border-color: rgb(219, 219, 219);
 }
 
 .dropdown-menu {
@@ -1406,7 +1417,8 @@ html {
   transition-duration: 300ms;
   border-radius: var(--rounded-box, 0.5rem);
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: #0d1d46; /** Color de fondo del menu desplegable */
+  border: 0.1em solid #07122c; /** Color del borde del menu desplegable */
   --tw-shadow: 0 10px 15px -2px var(--fallback-bs,oklch(var(--bs)/0.34));
   --tw-shadow-colored: 0 10px 15px -2px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
@@ -1469,7 +1481,7 @@ html {
   -moz-column-gap: 1rem;
        column-gap: 1rem;
   row-gap: 2.5rem;
-  color: var(--fallback-bc,oklch(var(--bc)/0.8));
+  color: white; /* Color de letras de footer */
 }
 
 .footer > * {
@@ -1767,13 +1779,16 @@ html {
   padding: var(--navbar-padding, 0.75rem 1.5rem);
   width: 100%;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: #07122c; /** Color de Navbar */
+  border-bottom-left-radius: 0.5em;
+  border-bottom-right-radius: 0.5em;
 }
 
 .navbar-start {
   display: flex;
   width: 50%;
   justify-content: flex-start;
+  color: white;
 }
 
 .navbar-center {
@@ -2055,7 +2070,7 @@ html {
   font-size: 1.125rem;
   line-height: 1.5rem;
   font-weight: 500;
-  color: var(--fallback-bc,oklch(var(--bc)/0.9));
+  color: black;
 }
 
 .accordion-toggle:disabled {
@@ -2102,9 +2117,9 @@ html {
 .accordion:where(.accordion-bordered) {
   border-radius: var(--rounded-box, 0.5rem);
   border-width: 1px;
-  border-color: var(--fallback-bc,oklch(var(--bc)/0.25));
+  border-color: black;
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: transparent;
 }
 
 .accordion-treeview-root .tree-view-space {
@@ -2265,9 +2280,10 @@ select.is-invalid + .advance-select-toggle:focus,
 
 .badge-primary {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity)));
+  background-color: white; /** Color de fondo del badge */
   --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  color: black; /** Color de letra del badge */
+  border: 0.1em solid black; /** Color del borde del badge */
 }
 
 .badge-soft {
@@ -2281,9 +2297,10 @@ select.is-invalid + .advance-select-toggle:focus,
 }
 
 .badge-soft.badge-primary {
-  background-color: var(--fallback-p,oklch(var(--p)/0.2));
+  background-color: white;
   --tw-text-opacity: 1;
-  color: var(--fallback-p,oklch(var(--p)/var(--tw-text-opacity)));
+  color: black;
+  border: 0.1em solid black;
 }
 
 .badge-soft.badge-secondary {
@@ -2363,6 +2380,13 @@ select.is-invalid + .advance-select-toggle:focus,
   }
 }
 
+@media (max-width: 768px) {
+  .titulo-central {
+    visibility: hidden;
+    display: none;
+  }
+}
+
 @media (hover: hover) {
   .btn:hover {
     --tw-shadow: 0 4px 6px -1px var(--fallback-bs,oklch(var(--bs)/0.2));
@@ -2372,16 +2396,8 @@ select.is-invalid + .advance-select-toggle:focus,
 
   @supports (color: color-mix(in oklab, black, black)) {
     .btn:hover {
-      background-color: color-mix(
-            in oklab,
-            oklch(var(--btn-color, var(--b2)) / var(--tw-bg-opacity, 1)) 90%,
-            black
-          );
-      border-color: color-mix(
-            in oklab,
-            oklch(var(--btn-color, var(--b2)) / var(--tw-border-opacity, 1)) 90%,
-            black
-          );
+      background-color: #173c92;
+      border-color: black;
     }
   }
 
@@ -2453,7 +2469,7 @@ select.is-invalid + .advance-select-toggle:focus,
   }
 
   .btn-text.btn-primary:hover {
-    background-color: var(--fallback-p,oklch(var(--p)/0.1));
+    background-color: var(--fallback-p,oklch(var(--p)/0.1black));
   }
 
   .btn-text.btn-secondary:hover {
@@ -2531,8 +2547,9 @@ select.is-invalid + .advance-select-toggle:focus,
 
 .btn-primary {
   --tw-text-opacity: 1;
-  color: var(--fallback-pc,oklch(var(--pc)/var(--tw-text-opacity)));
+  color: white; /** Color de letra de Boton primario */
   outline-color: var(--fallback-p,oklch(var(--p)/0.3));
+  filter: drop-shadow(3px 3px 8px rgba(0, 0, 0, 0.5));
 }
 
 @supports (color: oklch(0% 0 0)) {
@@ -2633,10 +2650,12 @@ select.is-invalid + .advance-select-toggle:focus,
 }
 
 .btn-soft.btn-secondary {
-  background-color: var(--fallback-s,oklch(var(--s)/0.2));
+  background-color: var(--fallback-s,oklch(var(--s)/0.2)); /* Color de fondo de boton secundario */
   --tw-text-opacity: 1;
-  color: var(--fallback-s,oklch(var(--s)/var(--tw-text-opacity)));
+  color: black;
   outline-color: var(--fallback-s,oklch(var(--s)/0.5));
+  border: 0.1em solid black;
+  box-shadow: 3px 3px 8px rgba(0, 0, 0, 0.5);
 }
 
 .btn-soft.btn-secondary.btn-active {
@@ -2795,7 +2814,7 @@ select.is-invalid + .advance-select-toggle:focus,
 }
 
 .btn-text:focus-visible {
-  border-color: transparent;
+  border-color: transparerent;
   background-color: var(--fallback-bc,oklch(var(--bc)/0.1));
   outline-color: currentColor;
 }
@@ -3031,7 +3050,7 @@ select.is-invalid + .advance-select-toggle:focus,
 .carousel-prev:hover,
 .carousel-next:hover {
   --tw-text-opacity: 1;
-  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity)));
+  color: gray;
 }
 
 .carousel-prev.disabled,
@@ -3266,7 +3285,7 @@ select.is-invalid + .advance-select-toggle:focus,
   font-size: 1rem;
   line-height: 1.375rem;
   font-weight: 500;
-  color: var(--fallback-bc,oklch(var(--bc)/0.9));
+  color: white; /* Color de titulo del footer */
 }
 
 .label-text {
@@ -5499,6 +5518,8 @@ textarea:focus-visible {
   padding-right: 0.625rem;
   font-size: 0.875rem;
   line-height: 1.25rem;
+  background-color: #15264e;
+  border: 0.1em solid black;
 }
 
 .input-filled.input-sm {
@@ -6280,7 +6301,7 @@ textarea:focus-visible {
 
 .bg-base-100 {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity, 1)));
+  background-color: #07122c; /** Color de circulos para pasar carousel */
 }
 
 .bg-base-shadow\/70 {
@@ -6288,7 +6309,7 @@ textarea:focus-visible {
 }
 
 .bg-base-200\/60 {
-  background-color: var(--fallback-b2,oklch(var(--b2)/0.6));
+  background-color: #07122c; /* Color del footer */
 }
 
 .bg-base-300 {
@@ -6452,15 +6473,15 @@ textarea:focus-visible {
 }
 
 .text-base-content\/50 {
-  color: var(--fallback-bc,oklch(var(--bc)/0.5));
+  color: black;
 }
 
 .text-base-content\/80 {
-  color: var(--fallback-bc,oklch(var(--bc)/0.8));
+  color: white;
 }
 
 .text-base-content\/90 {
-  color: var(--fallback-bc,oklch(var(--bc)/0.9));
+  color: var(--fallback-bc,oklch(var(--bc)/0.8));
 }
 
 .text-primary {
@@ -6469,12 +6490,12 @@ textarea:focus-visible {
 }
 
 .text-base-300\/80 {
-  color: var(--fallback-b3,oklch(var(--b3)/0.8));
+  color: black;
 }
 
 .text-base-content {
   --tw-text-opacity: 1;
-  color: var(--fallback-bc,oklch(var(--bc)/var(--tw-text-opacity, 1)));
+  color: black;
 }
 
 .text-neutral-content {
@@ -6802,12 +6823,12 @@ textarea:focus-visible {
 
 .active.carousel-active\:border-primary {
   --tw-border-opacity: 1;
-  border-color: var(--fallback-p,oklch(var(--p)/var(--tw-border-opacity, 1)));
+  border-color: #07122c;
 }
 
 .active.carousel-active\:bg-primary {
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-p,oklch(var(--p)/var(--tw-bg-opacity, 1)));
+  background-color: #07122c;
 }
 
 .active.carousel-active\:opacity-100 {

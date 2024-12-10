@@ -1,37 +1,369 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Primera Edicion Trayectos</title>
-        <link rel="stylesheet" href="">
-        <link rel="icon" type="image/png" href="">
-        <script src=""></script>
-        <style>
-
-        </style>
-    </head>
-    <body>
-        <header>
-
-        </header>
-        <div class="">
-            <fieldset class="">
-                <div class="">
-                    <div class="">
-                        
-                    </div>
-                    <div class="">
-                        
-                    </div>
-                    <div class="">
-                        
-                    </div>
-                </div>
-            </fieldset>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Primera Edicion</title>
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <link rel="icon" href="../../icon/trayectosChiclayoIcon.png" type="png">
+    <script src="../../js/flyonui.js"></script>
+    <script src="../../js/accordion.js"></script>
+  </head>
+  <body>
+    <nav class="navbar rounded-box justify-between gap-4 shadow"> <!-- Barra de navegacion superior (Header) -->
+        <div class="navbar-start">
+          <div class="dropdown relative inline-flex [--auto-close:inside] [--offset:9]"> <!-- Menu desplegable con redirecciones -->
+            <button id="dropdown-name" type="button" class="dropdown-toggle btn btn-text btn-circle dropdown-open:bg-base-content/10 dropdown-open:text-base-content"
+              aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown"><span class="icon-[tabler--menu-2] size-5"></span></button>
+            <ul class="dropdown-menu dropdown-open:opacity-100 hidden" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-name">
+              <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+                <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--user] size-[1.15rem]"></span>Sobre Nosotros
+                  <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180 ml-3"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-72" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                  <li><a class="dropdown-item" href="./html/sobreNosotros/sobreNosotros.html#tituloHistoria"><span class="icon-[tabler--clipboard] size-[1.15rem]"></span>Nuestra Historia</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--focus-2] size-[1.15rem]"></span>Nuestra Mision</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--eye] size-[1.15rem]"></span>Nuestra Vision</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--focus] size-[1.15rem]"></span>Nuestros Objetivos<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--diamond] size-[1.15rem]"></span>Nuestros Valores<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+                <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--books] size-[1.15rem]"></span>Nuestras Revistas
+                  <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--book] size-[1.15rem]"></span>Primera Edicion</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--books] size-[1.15rem]"></span>Todas las ediciones</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--book-2] size-[1.15rem]"></span>Ultima Edicion<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+                <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--mail] size-[1.15rem]"></span>Contactanos
+                  <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180 ml-8"></span>
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--briefcase-2] size-[1.15rem]"></span>Trabaja con Nosotros</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--help-octagon] size-[1.15rem]"></span>Preguntas Frecuentes</a></li>
+                </ul>
+              </li>
+              <li><a class="dropdown-item" href="#"><span class="icon-[tabler--message] size-[1.15rem]"></span>Dejanos un Mensaje</a></li>
+              <hr class="border-base-content/25 -mx-2 my-3"/>
+              <li><a class="dropdown-item" href="#"><span class="icon-[tabler--file] size-[1.15rem]"></span>Registrate</a></li>
+            </ul>
+          </div>
+          <label class="swap swap-rotate left-4"> <!-- Cambio entre modo dia y noche -->
+            <input type="checkbox" value="dark" class="theme-controller" />
+            <span class="swap-off icon-[tabler--sun] size-7"></span>
+            <span class="swap-on icon-[tabler--moon] size-7"></span>
+          </label>
+          <div class="dropdown relative inline-flex rtl:[--placement:bottom-end] left-10"> <!-- Selector de idioma -->
+            <button
+              id="dropdown-default"
+              type="button"
+              class="dropdown-toggle btn btn-primary"
+              aria-haspopup="menu"
+              aria-expanded="false"
+              aria-label="Dropdown"
+            >
+              <span class="icon-[tabler--language] size-[1.35rem]"></span>Idioma
+              <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+            </button>
+            <ul
+              class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60"
+              role="menu"
+              aria-orientation="vertical"
+              aria-labelledby="dropdown-default"
+            >
+              <li><a class="dropdown-item" href="#">Español (Spanish)</a></li>
+              <li><a class="dropdown-item" href="#">Ingles (English)</a></li>
+              <li>
+                <a class="dropdown-item" href="#">Portugues (Portuguese)</a>
+              </li>
+            </ul>
+          </div>
         </div>
-        <footer>
-
+        <div class="navbar-center flex items-center"> <!-- Titulo central del NavBar -->
+          <a class="link text-base-content/90 link-neutral text-xl font-semibold no-underline" href="#"> <!-- Titulo central del Navbar -->
+            Revista Trayectos | Sigue nuestros pasos...
+          </a>
+        </div>
+        <div class="navbar-end items-center gap-4"> <!-- Set de iconos seccion derecha -->
+          <div class="dropdown relative inline-flex rtl:[--placement:bottom]"> <!-- Desplegable de notificaciones -->
+            <button id="dropdown-scrollable" type="button" class="dropdown-toggle" aria-label="Notification Button">
+              <div class="indicator mt-2">
+                <span class="indicator-item bg-error size-2.5 rounded-full"></span> <!-- Icono de notificacion de la campana (Circulo rojo) -->
+                <span class="icon-[tabler--bell] text-base-content size-5"></span> <!-- Icono de campana de notificacion -->
+              </div>
+            </button>
+            <div class="dropdown-menu dropdown-open:opacity-100 hidden" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-scrollable"> <!-- Panel de notificaciones completas -->
+              <div class="dropdown-header justify-center">
+                <h6 class="text-base text-base-content/90">Notificaciones</h6>
+              </div>
+              <div class="vertical-scrollbar rounded-scrollbar text-base-content/80 max-h-80 max-sm:max-w-72" >
+                <div class="dropdown-item">
+                  <div class="avatar away-bottom">
+                    <div class="w-10 rounded-full">
+                      <img
+                        src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png"
+                        alt="User Avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="truncate text-base">Charles Franklin</h6>
+                    <small class="text-base-content/50 truncate"
+                      >Accepted your connection</small
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="avatar">
+                    <div class="w-10 rounded-full">
+                      <img
+                        src="https://cdn.flyonui.com/fy-assets/avatar/avatar-2.png"
+                        alt="User Avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="!truncate text-base">
+                      Martian added moved Charts & Maps task to the done board.
+                    </h6>
+                    <small class="text-base-content/50 truncate"
+                      >Today 10:00 AM</small
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="avatar online-bottom">
+                    <div class="w-10 rounded-full">
+                      <img
+                        src="https://cdn.flyonui.com/fy-assets/avatar/avatar-8.png"
+                        alt="User Avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="truncate text-base">New Message</h6>
+                    <small class="text-base-content/50 truncate"
+                      >You have new message from Natalie</small
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="avatar placeholder">
+                    <div
+                      class="bg-neutral text-neutral-content w-10 rounded-full p-2"
+                    >
+                      <span class="icon-[tabler--user] size-full"></span>
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="truncate text-base">
+                      Application has been approved 🚀
+                    </h6>
+                    <small class="text-base-content/50 text-wrap"
+                      >Your ABC project application has been approved.</small
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="avatar">
+                    <div class="w-10 rounded-full">
+                      <img
+                        src="https://cdn.flyonui.com/fy-assets/avatar/avatar-10.png"
+                        alt="User Avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="truncate text-base">New message from Jane</h6>
+                    <small class="text-base-content/50 text-wrap"
+                      >Your have new message from Jane</small
+                    >
+                  </div>
+                </div>
+                <div class="dropdown-item">
+                  <div class="avatar">
+                    <div class="w-10 rounded-full">
+                      <img
+                        src="https://cdn.flyonui.com/fy-assets/avatar/avatar-3.png"
+                        alt="User Avatar"
+                      />
+                    </div>
+                  </div>
+                  <div class="w-52 sm:w-60">
+                    <h6 class="truncate text-base">
+                      Barry Commented on App review task.
+                    </h6>
+                    <small class="text-base-content/50 truncate"
+                      >Today 8:32 AM</small
+                    >
+                  </div>
+                </div>
+              </div>
+              <a href="#" class="dropdown-footer justify-center gap-1">
+                <span class="icon-[tabler--eye] size-4"></span>
+                Ver todas...
+              </a>
+            </div>
+          </div>
+          <button class="btn btn-sm btn-text btn-circle size-[2.125rem]" aria-label="Search Button"> <!-- Icono de busqueda (Lupa) -->
+            <span class="icon-[tabler--search] size-[1.375rem]"></span>
+          </button>
+          <div class="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]"> <!-- Desplegable de informacion de usuario -->
+            <button id="dropdown-scrollable" type="button" class="dropdown-toggle flex items-center" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+              <div class="avatar">
+                <div class="size-9.5 rounded-full">
+                  <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png" alt="avatar 1"/>
+                </div>
+              </div>
+            </button>
+            <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-avatar">
+              <li class="dropdown-header gap-2">
+                <div class="avatar">
+                  <div class="w-10 rounded-full">
+                    <img src="https://cdn.flyonui.com/fy-assets/avatar/avatar-1.png" alt="avatar"/>
+                  </div>
+                </div>
+                <div>
+                  <h6 class="text-base-content/90 text-base font-semibold">Leonardo Garcia</h6>
+                  <small class="text-base-content/50">Administrador</small>
+                </div>
+              </li>
+              <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+                <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--chevron-left] size-4 rtl:rotate-180"></span>
+                  <span class="icon-[tabler--user]"></span>
+                  Mi Perfil
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--user]"></span>Mi Perfil</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--file-info] size-[1.15rem]"></span>Mi Informacion</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--progress] size-[1.15rem]"></span>Mi Progreso<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                </ul>
+              </li>
+              <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+                <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                  <span class="icon-[tabler--chevron-left] size-4 rtl:rotate-180"></span>
+                  <span class="icon-[tabler--settings]"></span>
+                  Configuracion
+                </button>
+                <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-72" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--edit] size-[1.15rem]"></span>Editar Informacion</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--password] size-[1.15rem]"></span>Restablecer Contraseña</a></li>
+                  <li><a class="dropdown-item" href="#"><span class="icon-[tabler--pencil-cog] size-[1.15rem]"></span>Editar Preferencias<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                </ul>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><span class="icon-[tabler--receipt-rupee]"></span>Billetera</a>
+              </li>
+              <li>
+                <a class="dropdown-item" href="#"><span class="icon-[tabler--help-triangle]"></span>FAQs</a>
+              </li>
+              <li class="dropdown-footer gap-2">
+                <a class="btn btn-error btn-soft btn-block" href="#"><span class="icon-[tabler--logout]"></span>Salir</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+    </nav>
+    <div class="w-full mt-15"> <!-- Informacion final acerca de la pagina (Footer) -->
+        <footer class="footer bg-base-200/60 p-10 justify-center gap-40">
+          <form class="gap-4">
+            <div class="flex items-center gap-2 text-xl font-bold">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M17.6745 16.9224L12.6233 10.378C12.2167 9.85117 11.4185 9.8611 11.0251 10.3979L6.45728 16.631C6.26893 16.888 5.96935 17.0398 5.65069 17.0398H3.79114C2.9635 17.0398 2.49412 16.0919 2.99583 15.4336L11.0224 4.90319C11.4206 4.38084 12.2056 4.37762 12.608 4.89668L20.9829 15.6987C21.4923 16.3558 21.024 17.3114 20.1926 17.3114H18.4661C18.1562 17.3114 17.8638 17.1677 17.6745 16.9224ZM12.5866 15.5924L14.8956 18.3593C15.439 19.0105 14.976 20 14.1278 20H9.74075C8.9164 20 8.4461 19.0586 8.94116 18.3994L11.0192 15.6325C11.4065 15.1169 12.1734 15.0972 12.5866 15.5924Z"
+                  fill="oklch(var(--p))"
+                />
+              </svg>
+              <span>Revista Trayectos</span>
+            </div>
+            <p class="text-base-content/90">
+              <a href="#" class="link link-hover mb-2"><span class="icon-[tabler--phone] size-[1rem] mr-2"></span>(+51) 987 654 321</a><br/>
+              <a href="#" class="link link-hover mb-2"><span class="icon-[tabler--mail] size-[1rem] mr-2"></span>revistaTrayectos@hotmail.com</a><br/>
+              <a href="#" class="link link-hover"><span class="icon-[tabler--map-pin] size-[1rem] mr-2"></span>Bolivar 408, Plaza de Armas de<br/>Ferreñafe, Ferreñafe 14311</a>
+            </p>
+            <fieldset class="form-control">
+              <label class="label">
+                <span class="label-text text-base-content/90 mb-2">Suscribete para nuevas actualizaciones</span>
+              </label>
+              <div class="flex flex-wrap sm:flex-nowrap w-full gap-1">
+                <input class="input input-sm" placeholder="johndoe@gmail.com" />
+                <button class="btn btn-sm btn-primary">Suscribete</button>
+              </div>
+            </fieldset>
+          </form>
+          <nav class="text-base-content/90">
+            <h6 class="footer-title">Sobre Nosotros</h6>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--clipboard] size-[1rem] mr-2"></span>Nuestra Historia</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--focus-2] size-[1rem] mr-2"></span>Nuestra Mision</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--eye] size-[1rem] mr-2"></span>Nuestra Vision</a>
+            <span>
+              <a href="#" class="link link-hover"><span class="icon-[tabler--focus] size-[1rem] mr-2"></span>Nuestro Objetivo</a>
+              <span class="badge ms-2 badge-sm badge-primary">Nuevo</span>
+            </span>
+            <span>
+              <a href="#" class="link link-hover"><span class="icon-[tabler--diamond] size-[1rem] mr-2"></span>Nuestros Valores</a>
+              <span class="badge ms-2 badge-sm badge-primary">Nuevo</span>
+            </span>
+          </nav>
+          <nav class="text-base-content/90">
+            <h6 class="footer-title">Nuestras Ediciones</h6>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--book] size-[1rem] mr-2"></span>Primera Edicion</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--books] size-[1rem] mr-2"></span>Todas las ediciones</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--book-2] size-[1rem] mr-2"></span>Ultima Edicion</a>
+          </nav>
+          <nav class="text-base-content/90">
+            <h6 class="footer-title">Legal</h6>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--cookie] size-[1rem] mr-2"></span>Politica de Cookies</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--lock] size-[1rem] mr-2"></span>Politica de Privacidad</a>
+            <a href="#" class="link link-hover"><span class="icon-[tabler--gavel] size-[1rem] mr-2"></span>Condiciones de Uso Legal Web</a>
+          </nav>
         </footer>
-    </body>
+        <footer
+          class="footer bg-base-200/60 border-base-content/25 border-t px-6 py-4"
+        >
+          <div class="flex w-full items-center justify-between">
+            <aside class="grid-flow-col items-center">
+              <p>Trayectos Chiclayo   | 
+                <a class="link link-hover font-medium ml-2" href="#">Todos los derechos reservados 2024 ©</a>
+              </p>
+            </aside>
+            <div class="flex h-5 gap-4">
+              <a href="https://www.facebook.com/" target="_blank" class="link" aria-label="Facebook Link">
+                <span class="icon-[tabler--brand-facebook] size-5"></span>
+              </a>
+              <a href="https://www.instagram.com/" target="_blank" class="link" aria-label="Instagram Link">
+                <span class="icon-[tabler--brand-instagram] size-5"></span>
+              </a>
+              <a href="https://x.com/" target="_blank" class="link" aria-label="X Link">
+                <span class="icon-[tabler--brand-x] size-5"></span>
+              </a>
+              <a href="https://www.linkedin.com/" target="_blank" class="link" aria-label="LinkedIn Link">
+                <span class="icon-[tabler--brand-linkedin] size-5"></span>
+              </a>
+              <a href="https://www.youtube.com/" target="_blank" class="link" aria-label="Youtube Link">
+                <span class="icon-[tabler--brand-youtube] size-5"></span>
+              </a>
+            </div>
+          </div>
+        </footer>
+    </div>
+    <script src="../../js/flyonui.js"></script>
+    <script src="../../js/accordion.js"></script> 
+  </body>
 </html>
