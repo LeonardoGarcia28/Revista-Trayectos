@@ -8,6 +8,7 @@
     <link rel="icon" href="../../icon/trayectosChiclayoIcon.png" type="png">
     <script src="../../js/flyonui.js"></script>
     <script src="../../js/accordion.js"></script>
+    <script src="../../js/mainJs.js"></script>
   </head>
   <body>
     <nav class="navbar justify-between gap-4 shadow"> <!-- Barra de navegacion superior (Header) -->
@@ -273,6 +274,158 @@
         </div>
       </div>
     </nav>
+    <div class="card group sm:card hover:shadow max-w-sm sm:max-w-full justify-self-center mt-10 mb-4 tarjetaTamaño">
+      <div class="card-body">
+        <h5 class="card-title text-center mb-8">Revista Trayectos - Edicion 01</h5>
+        <p class="textoJustificado mb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum 
+          explicabo dolor suscipit perspiciatis tempora voluptatum animi 
+          ipsa praesentium officia id numquam maiores ad adipisci harum 
+          quo magni, necessitatibus obcaecati architecto.
+        </p>
+        <p class="textoJustificado mb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum 
+          explicabo dolor suscipit perspiciatis tempora voluptatum animi 
+          ipsa praesentium officia id numquam maiores ad adipisci harum 
+          quo magni, necessitatibus obcaecati architecto.
+        </p>
+        <p class="textoJustificado mb-2">
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Rerum 
+          explicabo dolor suscipit perspiciatis tempora voluptatum animi 
+          ipsa praesentium officia id numquam maiores ad adipisci harum 
+          quo magni, necessitatibus obcaecati architecto.
+        </p>
+        <div class="card-footer text-base-content/90 text-center mt-2">Fecha de publicación: Octubre del 2012</div>
+      </div>
+    </div>
+    <div class="max-w-sm sm:max-w-full justify-self-center"> <!-- Imagen de la primera edicion de la Revista Trayectos -->
+      <figure>
+        <img 
+          src="../../img/portadasRevistas/REVISTA 1.jpg" 
+          alt=""
+          style="max-width: 450px; max-height: 900px; width: 100%; height: 100%; border-radius: 0.75em; cursor: pointer;"
+          onclick="window.open('../../docs/revistasPDF/revistaTrayectosEdicion01.pdf', '_blank');"
+          class="justify-self-center"
+        >
+      </figure>
+    </div>
+    <div class="divider mt-15 mb-10">Comentario Directora</div> <!-- Separador -->
+    <blockquote class="relative justify-self-center p-10 tarjetaTamaño max-w-sm sm:max-w-full"> <!-- Frase representativa y principal de la pagina dada por la Directora de la revista -->
+      <span class="icon-[tabler--quote] text-base-300/80 absolute -start-3 -top-3 size-16 rotate-180 rtl:rotate-0"></span>
+      <div class="relative z-[1]">
+        <p class="text-base-content/50 text-lg text-center">
+          <em>
+            The blockquote element is ideal for showcasing well-known quotes
+            within content. It's commonly used for testimonials, reviews, and
+            notable quotes in articles.
+          </em>
+        </p>
+      </div>
+      <footer class="mt-8 flex items-center justify-center mb-4">
+        <div class="avatar">
+          <div class="size-10 rounded-full">
+            <img
+              src="../../img/fotosEquipo/carmenJulia.jpg"
+              alt="avatar"
+            />
+          </div>
+        </div>
+        <div class="ms-4 justify-items-center">
+          <div class="text-base-content/50 text-base font-semibold">
+            Carmen Julia Torres Ayudante
+          </div>
+          <div class="text-base-content/50 text-xs">Directora General</div>
+        </div>
+      </footer>
+    </blockquote>
+    <div class="divider mt-5 mb-10">Informacion de la edicion</div> <!-- Separador -->
+    <div class="card group sm:card hover:shadow max-w-sm sm:max-w-full justify-self-center tarjetaTamaño">
+      <div class="card-body max-w-full">
+        <p class="mb-8 textoJustificado">
+          Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quidem commodi 
+          eligendi natus iste ad quod tempora voluptatem quasi nobis ullam magnam 
+          vitae, expedita culpa quos. Maxime veniam quos libero. Quos.
+        </p>
+      </div>
+    </div>
+    <div class="acordeonTamaño justify-self-center max-w-sm sm:max-w-full px-5 mb-25"> <!-- Informacion de la primera edicion de la Revista Trayectos -->
+      <div class="justify-self-center px-4 mb-2 max-w-sm sm:max-w-full">
+        <h3 class="text-2xl font-semibold text-base-content/50 text-center mb-2">Revistas Trayectos - Edicion: 01</h3>
+        <p class="mt-1 max-w-full text-base-content/50 text-center mb-8">Primera Edicion de la Revista Trayectos</p>
+      </div>
+      <div class="mt-6 border-t border-base-content/25">
+        <dl class="divide-y divide-base-content/25">
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2">Nombre del producto</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0">Revista Trayectos</dd>
+          </div>
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2">Fecha de Lanzamiento</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0">Octubre 2012</dd>
+          </div>
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2">Numero de Edicion</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0">Edicion N° 01</dd>
+          </div>
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2">Cantidad de hojas</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0">32 hojas</dd>
+          </div>
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2">Precio</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0">Gratuita en su totalidad</dd>
+          </div>
+          <div class="flex justify-between max-w-sm sm:max-w-full sm:grid sm:grid-cols-1 text-base mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 mt-2 mb-2">Descripcion</dt>
+            <dd class="mt-2 text-base-content/50 sm:col-span-2 sm:mt-0 textoDerecha">
+              La <span class="font-semibold text-base-content/50">primera edicion de trayectos</span> Lorem 
+              ipsum, dolor sit amet consectetur adipisicing elit. Accusantium animi id dolores.
+            </dd>
+          </div>
+          <div class="grid grid-cols-1 mb-2 px-5 py-2 gap-4">
+            <dt class="font-medium text-base-content/50 text-center py-4">Documentos</dt>
+            <dd class="justify-self-center mt-2">
+              <ul role="list" class="divide-y divide-base-content/25 rounded-md border border-base-content/25">
+                <li class="flex items-center justify-between py-4 px-5">
+                  <div class="flex w-0 flex-1 items-center">
+                    <span class="icon-[tabler--paperclip] size-5 flex-shrink-0"></span>
+                    <div class="ms-4 flex min-w-0 flex-1 gap-2">
+                      <span class="truncate font-medium text-base-content/50">Revista_Trayectos_Edicion_01.pdf</span>
+                      <span class="flex-shrink-0 text-base-content/50">32 hojas</span>
+                    </div>
+                  </div>
+                  <div class="ms-4 flex-shrink-0">
+                    <a 
+                      href="#" 
+                      class="link link-primary text-base-content/50"
+                      onclick="window.open('../../docs/revistasPDF/revistaTrayectosEdicion01.pdf', '_blank');"
+                      >Leer en PDF
+                    </a>
+                  </div>
+                </li>
+                <li class="flex items-center justify-between py-4 px-5">
+                  <div class="flex w-0 flex-1 items-center">
+                    <span class="icon-[tabler--paperclip] size-5 flex-shrink-0"></span>
+                    <div class="ms-4 flex min-w-0 flex-1 gap-2">
+                      <span class="truncate font-medium text-base-content/50">Revista_Trayectos_Edicion_01.pdf</span>
+                      <span class="flex-shrink-0 text-base-content/50">14.7 kbytes</span>
+                    </div>
+                  </div>
+                  <div class="ms-4 flex-shrink-0">
+                    <a 
+                      href="#"
+                      class="link link-primary text-base-content/50"
+                      onclick="downloadFile('../../docs/revistasPDF/revistaTrayectosEdicion01.pdf', 'revistaTrayectosEdicion01.pdf')"
+                      >Descargar
+                    </a>
+                  </div>
+                </li>
+              </ul>
+            </dd>
+          </div>
+        </dl>
+      </div>
+    </div>
     <div class="w-full mt-15"> <!-- Informacion final acerca de la pagina (Footer) -->
       <footer class="footer bg-base-200/60 p-10 justify-center gap-40">
         <form class="gap-4">
@@ -351,6 +504,7 @@
       </footer>
     </div>
     <script src="../../js/flyonui.js"></script>
-    <script src="../../js/accordion.js"></script> 
+    <script src="../../js/accordion.js"></script>
+    <script src="../../js/mainJs.js"></script>
   </body>
 </html>

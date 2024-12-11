@@ -1155,6 +1155,16 @@ html {
   text-align: justify;
 }
 
+.textoDerecha {
+  text-align: justify;
+  max-width: 450px;
+  width: 100%;
+}
+
+.alineadoDerecha {
+  justify-content: right;
+}
+
 .acordeonTamaño {
   width: 800px; /** Tamaño arreglado de los acordeones */
 }
