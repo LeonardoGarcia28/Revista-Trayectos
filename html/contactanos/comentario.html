@@ -1,149 +1,356 @@
 <!DOCTYPE html>
-    <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Dejanos un comentario</title>
-        <link rel="stylesheet" href="../../css/contactanos/comentario.css">
-        <link rel="stylesheet" href="../../css/imports.css">
-        <link rel="stylesheet" href="../../css/header.css">
-        <link rel="stylesheet" href="../../css/footer.css">
-        <link rel="stylesheet" href="../../css/main.css">
-        <link rel="stylesheet" href="../../css/modeselect.css">
-        <link rel="icon" type="image/png" href="../../icon/comentario.png">
-        <script src="../../js/contactanos/comentario.js"></script>
-    </head>
-    <body>
-        <div class="general">
-            <fieldset class="primerFieldset">
-                <div class="tituloFieldset">
-                    <h1 id="tituloFieldset">Dejanos un comentario</h1>
-                </div>
-                <form method="post">
-                    <div class="formulario">
-                        <div class="campoCorreo">
-                            <div class="labelCorreo">
-                                <label for="correoIngresadoGeneral" id="labelCorreo">Ingresar correo electronico:</label>
-                                <label for="correoIngresadoGeneral" id="campoObligatorio" title="Este campo es obligatorio"> *</label>
-                            </div>
-                            <div class="inputCorreoGeneral">
-                                <div class="iconoCorreo">
-                                    <i class="fi fi-ss-envelope" id="iconoCorreo"></i>
-                                </div>
-                                <div class="correoIngresadoGeneral">
-                                    <input type="text" name="correoIngresadoGeneral" id="correoIngresadoGeneral" autocomplete="off" placeholder="Ingresar correo" required>
-                                    <div class="seleccionCorreo">
-                                        <label for="seleccionCorreo">@</label>
-                                        <select name="seleccionCorreo" id="seleccionCorreo" required>
-                                            <option value="default" disabled selected>-- Correo --</option>
-                                            <option value="hotmail">Hotmail</option>
-                                            <option value="gmail">Gmail</option>
-                                            <option value="outlook">Outlook</option>
-                                            <option value="yahoo">Yahoo</option>
-                                            <option value="icloud">iCloud</option>
-                                        </select>
-                                    </div>
-                                    <div class="seleccionCorreo">
-                                        <label for="seleccionTerminacion">.</label>
-                                        <select name="seleccionTerminacion" id="seleccionTerminacion" required>
-                                            <option value="default" disabled selected>-- Terminacion --</option>
-                                            <option value="com">com</option>
-                                            <option value="es">es</option>
-                                            <option value="net">net</option>
-                                            <option value="org">org</option>
-                                            <option value="edu.pe">edu.pe</option>
-                                            <option value="gob.pe">gob.pe</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="verificacionCorreo">
-                                    <i class="fi fi-rr-check-circle" id="verificacionCorreo"></i>   
-                                </div>
-                            </div>
-                            <div class="comentarioCorreo">
-                                <label style="color: transparent;">Comentario Default</label>
-                            </div>
-                        </div>
-                        <div class="campoCalificacion">
-                            <div class="labelCalificacion">
-                                <label for="primeraEstrellaCalificacion" id="labelCalificacion">Calificar pagina web:</label>
-                                <label for="primeraEstrellaCalificacion" id="campoObligatorio" title="Este campo es obligatorio"> *</label>
-                            </div>
-                            <div class="inputCalificacion">
-                                <div class="parteIzquierdaCalificacion">
-                                    <div class="iconoCalificacion">
-                                        <i class="fi fi-ss-circle-star" id="iconoCalificacion"></i>
-                                    </div>
-                                    <div class="estrellasCalificacion">
-                                        <i class="fi fi-ss-star" id="primeraEstrellaCalificacion" name="primeraEstrellaCalificacion" onclick="primeraEstrella()"></i>
-                                        <i class="fi fi-ss-star" id="segundaEstrellaCalificacion" name="segundaEstrellaCalificacion" onclick="segundaEstrella()"></i>
-                                        <i class="fi fi-ss-star" id="terceraEstrellaCalificacion" name="terceraEstrellaCalificacion" onclick="terceraEstrella()"></i>
-                                        <i class="fi fi-ss-star" id="cuartaEstrellaCalificacion" name="cuartaEstrellaCalificacion" onclick="cuartaEstrella()"></i>
-                                        <i class="fi fi-ss-star" id="quintaEstrellaCalificacion" name="quintaEstrellaCalificacion" onclick="quintaEstrella()"></i>
-                                    </div>
-                                    <div class="limpiarCalificacion">
-                                        <button type="button" id="limpiarCalificacion" name="limpiarCalificacion" onclick="limpiarCalificacion()">Limpiar calificacion</button>
-                                    </div>
-                                </div>
-                                <div class="verificacionCalificacion">
-                                    <i class="fi fi-rr-check-circle" id="verificacionCalificacion"></i>   
-                                </div>
-                            </div>
-                            <div class="comentarioCalificacion">
-                                <label style="color: transparent;">Comentario Default</label>
-                            </div>
-                        </div>
-                        <div class="campoComentario">
-                            <div class="labelComentario">
-                                <label for="comentarioIngresado" id="labelComentario">Ingresar comentario:</label>
-                                <label for="comentarioIngresado" id="campoObligatorio" title="Este campo es obligatorio"> *</label>
-                            </div>
-                            <div class="inputComentario">
-                                <div class="iconoComentario">
-                                    <i class="fi fi-ss-comment-alt" id="iconoComentario"></i>
-                                </div>
-                                <div class="inputTextArea">
-                                    <textarea name="comentarioIngresado" id="comentarioIngresado" placeholder="Ingresar comentario" autocomplete="off" onchange="" maxlength="255" required></textarea>
-                                </div>
-                                <div class="verificacionComentario">
-                                    <i class="fi fi-rr-check-circle" id="verificacionComentario"></i>
-                                </div>
-                            </div>
-                            <div class="pieComentario">
-                                <div class="opcionesComentarios">
-                                    <div class="limpiarTextArea">
-                                        <button type="button" id="limpiarTextArea" name="limpiarTextArea" onclick="limpiarTextArea()">Limpiar texto</button>
-                                    </div>
-                                    <div class="contadorPalabras">
-                                        <label>Cantidad de caracteres: </label>
-                                        <label id="cantidadPalabras"></label>
-                                        <label> caracteres.</label>
-                                    </div>
-                                </div>
-                                <div class="comentarioTextArea">
-                                    <label style="color: transparent;">Comentario Default</label>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="barraProgreso">
-                            <label for="" id="labelBarraProgreso">Progreso del envio del comentario: </label>
-                            <div class="barrasProgreso" id="barrasProgreso">
-                                <button id="primer-progreso"></button>
-                                <button id="segundo-progreso"></button>
-                                <button id="tercer-progreso"></button>
-                            </div>
-                        </div>
-                        <div class="opcionesBotones">
-                            <div class="enviarFormulario">
-                                <input type="submit" id="enviarFormulario" name="enviarFormulario" value="Enviar el formulario">
-                            </div>
-                            <div class="limpiarTodo">
-                                <button type="button" id="botonLimpiarTodo" name="botonLimpiarTodo" onclick="">Limpiar campos</button>
-                            </div>
-                        </div>
-                    </div>
-                </form>
-            </fieldset>
+<html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Comentario</title>
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <link rel="icon" href="../../icon/trayectosChiclayoIcon.png" type="png">
+    <script src="../../js/flyonui.js"></script>
+    <script src="../../js/accordion.js"></script>
+  </head>
+  <body>
+    <nav class="navbar justify-between gap-4 shadow"> <!-- Barra de navegacion superior (Header) -->
+      <div class="navbar-start mt-2 mb-2"> <!-- Set de iconos seccion izquierda -->
+        <div class="dropdown relative inline-flex [--auto-close:inside] [--offset:9]"> <!-- Menu desplegable con redirecciones -->
+          <button id="dropdown-name" type="button" class="dropdown-toggle btn btn-text btn-circle dropdown-open:bg-base-content/10 dropdown-open:text-base-content"
+            aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown"><span class="icon-[tabler--menu-2] size-5 text-base-content/80"></span></button>
+          <ul class="dropdown-menu dropdown-open:opacity-100 hidden" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-name">
+            <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+              <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left text-base-content/80" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="icon-[tabler--user] size-[1.15rem] text-base-content/80"></span>Sobre Nosotros
+                <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180 ml-3"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-72" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/quienesSomos.html"><span class="icon-[tabler--user] size-[1.15rem] text-base-content/80"></span>Quienes Somos</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/sobreNosotros.html#nuestraHistoria"><span class="icon-[tabler--clipboard] size-[1.15rem] text-base-content/80"></span>Nuestra Historia</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/sobreNosotros.html#nuestraMisionVision"><span class="icon-[tabler--focus-2] size-[1.15rem] text-base-content/80"></span>Nuestra Mision</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/sobreNosotros.html#nuestraMisionVision"><span class="icon-[tabler--eye] size-[1.15rem] text-base-content/80"></span>Nuestra Vision</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/sobreNosotros.html#nuestrosObjetivos"><span class="icon-[tabler--focus] size-[1.15rem] text-base-content/80"></span>Nuestros Objetivos<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../sobreNosotros/sobreNosotros.html#nuestrosValores"><span class="icon-[tabler--diamond] size-[1.15rem] text-base-content/80"></span>Nuestros Valores<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+              <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left text-base-content/80" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="icon-[tabler--books] size-[1.15rem] text-base-content/80"></span>Nuestras Revistas
+                <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                <li><a class="dropdown-item text-base-content/80" href="../revistaTrayectos/primeraEdicion.html"><span class="icon-[tabler--book] size-[1.15rem] text-base-content/80"></span>Primera Edicion</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../revistaTrayectos/todasEdiciones.html"><span class="icon-[tabler--books] size-[1.15rem] text-base-content/80"></span>Todas las ediciones</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../revistaTrayectos/ultimaEdicion.html"><span class="icon-[tabler--book-2] size-[1.15rem] text-base-content/80"></span>Ultima Edicion<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+              <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left text-base-content/80" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="icon-[tabler--mail] size-[1.15rem] text-base-content/80"></span>Contactanos
+                <span class="icon-[tabler--chevron-right] size-4 rtl:rotate-180 ml-8"></span>
+              </button>
+              <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                <li><a class="dropdown-item text-base-content/80" href="./contactanos.html"><span class="icon-[tabler--mail] size-[1.15rem] text-base-content/80""></span>Contactanos</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="./trabajaConNosotros.html"><span class="icon-[tabler--briefcase-2] size-[1.15rem] text-base-content/80"></span>Trabaja con Nosotros</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="./faq.html"><span class="icon-[tabler--help-octagon] size-[1.15rem] text-base-content/80"></span>Preguntas Frecuentes</a></li>
+              </ul>
+            </li>
+            <li><a class="dropdown-item text-base-content/80" href="./comentario.html"><span class="icon-[tabler--message] size-[1.15rem] text-base-content/80"></span>Dejanos un Mensaje</a></li>
+            <hr class="border-base-content/25 -mx-2 my-3"/>
+            <li><a class="dropdown-item text-base-content/80" href="./formularioContacto.html"><span class="icon-[tabler--file] size-[1.15rem] text-base-content/80"></span>Registrate</a></li>
+          </ul>
         </div>
-    </body>
+        <label class="swap swap-rotate left-4"> <!-- Cambio entre modo dia y noche -->
+          <input type="checkbox" value="dark" class="theme-controller" />
+          <span class="swap-off icon-[tabler--sun] size-7 text-base-content/80"></span>
+          <span class="swap-on icon-[tabler--moon] size-7 text-base-content/80"></span>
+        </label>
+        <div class="dropdown relative inline-flex rtl:[--placement:bottom-end] left-10 text-base-content/80"> <!-- Selector de idioma -->
+          <button
+            id="dropdown-default"
+            type="button"
+            class="dropdown-toggle btn btn-primary"
+            aria-haspopup="menu"
+            aria-expanded="false"
+            aria-label="Dropdown"
+          >
+            <span class="icon-[tabler--language] size-[1.35rem] text-base-content/80"></span>Idioma
+            <span class="icon-[tabler--chevron-down] dropdown-open:rotate-180 size-4"></span>
+          </button>
+          <ul
+            class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60"
+            role="menu"
+            aria-orientation="vertical"
+            aria-labelledby="dropdown-default"
+          >
+            <li><a class="dropdown-item text-base-content/80" href="#">Español (Spanish)</a></li>
+            <li><a class="dropdown-item text-base-content/80" href="#">Ingles (English)</a></li>
+            <li><a class="dropdown-item text-base-content/80" href="#">Portugues (Portuguese)</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="navbar-center items-center mt-2 mb-2 titulo-central"> <!-- Titulo central del NavBar -->
+        <a class="link text-base-content/80 link-neutral text-xl font-semibold no-underline" href="../../src/index.html"> <!-- Titulo central del Navbar -->
+          Revista Trayectos | Sigue nuestros pasos...
+        </a> 
+      </div>
+      <div class="navbar-end items-center gap-4 mt-2 mb-2"> <!-- Set de iconos seccion derecha -->
+        <div class="dropdown relative inline-flex rtl:[--placement:bottom]"> <!-- Desplegable de notificaciones -->
+          <button id="dropdown-scrollable" type="button" class="dropdown-toggle" aria-label="Notification Button">
+            <div class="indicator mt-2">
+              <span class="indicator-item bg-error size-2.5 rounded-full"></span> <!-- Icono de notificacion de la campana (Circulo rojo) -->
+              <span class="icon-[tabler--bell] text-base-content/80 size-5"></span> <!-- Icono de campana de notificacion -->
+            </div>
+          </button>
+          <div class="dropdown-menu dropdown-open:opacity-100 hidden" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-scrollable"> <!-- Panel de notificaciones completas -->
+            <div class="dropdown-header justify-center">
+              <h6 class="text-base text-base-content/80">Notificaciones</h6>
+            </div>
+            <div class="vertical-scrollbar rounded-scrollbar text-base-content/80 max-h-80 max-sm:max-w-72" >
+              <div class="dropdown-item">
+                <div class="avatar online-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../icon/trayectosChiclayoIcon.png"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">Equipo Trayectos</h6>
+                  <small class="text-base-content/90 truncate"
+                    >Revista N°21 publicada</small
+                  >
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <div class="avatar away-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../img/fotosEquipo/carmenJulia.jpg"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">
+                    Carmen Julia Torres Ayudante
+                  </h6>
+                  <small class="text-base-content/90 text-wrap"
+                    >Today 10:00 AM</small
+                  >
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <div class="avatar online-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../icon/trayectosChiclayoIcon.png"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">Equipo Trayectos</h6>
+                  <small class="text-base-content/90 truncate"
+                    >Revista N°20 publicada</small
+                  >
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <div class="avatar away-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../img/fotosEquipo/carmenJulia.jpg"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">
+                    Carmen Julia Torres Ayudante
+                  </h6>
+                  <small class="text-base-content/90 text-wrap"
+                    >Today 09:00 AM</small
+                  >
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <div class="avatar online-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../icon/trayectosChiclayoIcon.png"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">Equipo Trayectos</h6>
+                  <small class="text-base-content/90 truncate"
+                    >Revista N°19 publicada</small
+                  >
+                </div>
+              </div>
+              <div class="dropdown-item">
+                <div class="avatar away-bottom">
+                  <div class="w-10 rounded-full">
+                    <img
+                      src="../../img/fotosEquipo/carmenJulia.jpg"
+                      alt="User Avatar"
+                    />
+                  </div>
+                </div>
+                <div class="w-52 sm:w-60 text-base-content/80">
+                  <h6 class="truncate text-base">
+                    Carmen Julia Torres Ayudante
+                  </h6>
+                  <small class="text-base-content/90 text-wrap"
+                    >Today 08:00 AM</small
+                  >
+                </div>
+              </div>
+            </div>
+            <a href="#" class="dropdown-footer justify-center gap-1 text-base-content/80">
+              <span class="icon-[tabler--eye] size-4"></span>
+              Ver todas...
+            </a>
+          </div>
+        </div>
+        <button class="btn btn-sm btn-text btn-circle size-[2.125rem]" aria-label="Search Button"> <!-- Icono de busqueda (Lupa) -->
+          <span class="icon-[tabler--search] size-[1.375rem] text-base-content/80"></span>
+        </button>
+        <div class="dropdown relative inline-flex [--auto-close:inside] [--offset:8] [--placement:bottom-end]"> <!-- Desplegable de informacion de usuario -->
+          <button id="dropdown-scrollable" type="button" class="dropdown-toggle flex items-center" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+            <div class="avatar">
+              <div class="size-9.5 rounded-full">
+                <img src="../../img/fotosEquipo/martinPastor.jpg" alt="avatar 1"/>
+              </div>
+            </div>
+          </button>
+          <ul class="dropdown-menu dropdown-open:opacity-100 hidden min-w-60" role="menu" aria-orientation="vertical" aria-labelledby="dropdown-avatar">
+            <li class="dropdown-header gap-2">
+              <div class="avatar">
+                <div class="w-10 rounded-full">
+                  <img src="../../img/fotosEquipo/martinPastor.jpg" alt="avatar"/>
+                </div>
+              </div>
+              <div>
+                <h6 class="text-base-content/80 text-base font-semibold">Leonardo Garcia</h6>
+                <small class="text-base-content/80">Administrador</small>
+              </div>
+            </li>
+            <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+              <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left text-base-content/80" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="icon-[tabler--chevron-left] size-4 rtl:rotate-180"></span>
+                <span class="icon-[tabler--user]"></span>
+                Mi Perfil
+              </button>
+              <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-64" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/perfilUsuario.html"><span class="icon-[tabler--user] text-base-content/80"></span>Mi Perfil</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/perfilUsuario.html#informacionUsuario"><span class="icon-[tabler--file-info] size-[1.15rem] text-base-content/80"></span>Mi Informacion</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/perfilUsuario.html#progresoUsuario"><span class="icon-[tabler--progress] size-[1.15rem] text-base-content/80"></span>Mi Progreso<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+              </ul>
+            </li>
+            <li class="dropdown relative [--auto-close:inside] [--offset:10] [--placement:right-start] max-sm:[--placement:bottom] rtl:[--placement:left-start]">
+              <button id="nested-dropdown-2" class="dropdown-toggle dropdown-item dropdown-open:bg-base-content/10 dropdown-open:text-base-content justify-left text-base-content/80" aria-haspopup="menu" aria-expanded="false" aria-label="Dropdown">
+                <span class="icon-[tabler--chevron-left] size-4 rtl:rotate-180"></span>
+                <span class="icon-[tabler--settings]"></span>
+                Configuracion
+              </button>
+              <ul class="dropdown-menu dropdown-open:opacity-100 hidden w-72" role="menu" aria-orientation="vertical" aria-labelledby="nested-dropdown-2">
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/configuracionUsuario.html#editarInformacion"><span class="icon-[tabler--edit] size-[1.15rem] text-base-content/80"></span>Editar Informacion</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/configuracionUsuario.html#restablecerContraseña"><span class="icon-[tabler--password] size-[1.15rem] text-base-content/80"></span>Restablecer Contraseña</a></li>
+                <li><a class="dropdown-item text-base-content/80" href="../usuario/configuracionUsuario.html#editarPreferencias"><span class="icon-[tabler--pencil-cog] size-[1.15rem] text-base-content/80"></span>Editar Preferencias<span class="badge badge-sm badge-soft badge-primary rounded-full">Nuevo</span></a></li>
+              </ul>
+            </li>
+            <li>
+              <a class="dropdown-item text-base-content/80" href="../usuario/billetera.html"><span class="icon-[tabler--receipt-rupee] text-base-content/80"></span>Billetera</a>
+            </li>
+            <li>
+              <a class="dropdown-item text-base-content/80" href="./faq.html"><span class="icon-[tabler--help-triangle] text-base-content/80"></span>FAQs</a>
+            </li>
+            <li class="dropdown-footer gap-2 text-base-content/80">
+              <a class="btn btn-error btn-soft btn-block" href="#"><span class="icon-[tabler--logout]"></span>Salir</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+    <div class="w-full mt-15"> <!-- Informacion final acerca de la pagina (Footer) -->
+      <footer class="footer bg-base-200/60 p-10 justify-center gap-40">
+        <form class="gap-4">
+          <div class="flex items-center gap-2 text-xl font-bold">
+            <img src="../../icon/trayectosChiclayoIcon.png" style="width: 22px; height: 22px;">
+            <span>Revista Trayectos</span>
+          </div>
+          <p class="text-base-content/90">
+            <a href="tel:+51987654321" class="link link-hover mb-2"><span class="icon-[tabler--phone] size-[1rem] mr-2"></span>(+51) 987 654 321</a><br/>
+            <a href="mailto:revistaTrayectos@hotmail.com?subject=Revista_Trayectos" class="link link-hover mb-2"><span class="icon-[tabler--mail] size-[1rem] mr-2"></span>revistaTrayectos@hotmail.com</a><br/>
+            <a href="https://maps.app.goo.gl/agz7E3v4j6Qf86LfA" target="_blank" class="link link-hover"><span class="icon-[tabler--map-pin] size-[1rem] mr-2"></span>Bolivar 408, Plaza de Armas de<br/>Ferreñafe, Ferreñafe 14311</a>
+          </p>
+          <fieldset class="form-control">
+            <label class="label">
+              <span class="label-text text-base-content/90 mb-2">Suscribete para nuevas actualizaciones</span>
+            </label>
+            <div class="flex flex-wrap sm:flex-nowrap w-full gap-1">
+              <input class="input input-sm" placeholder="johndoe@gmail.com"/>
+              <button class="btn btn-sm btn-primary">Suscribete</button>
+            </div>
+          </fieldset>
+        </form>
+        <nav class="text-base-content/90">
+          <h6 class="footer-title">Sobre Nosotros</h6>
+          <a href="../sobreNosotros/sobreNosotros.html#nuestraHistoria" target="_blank" class="link link-hover"><span class="icon-[tabler--clipboard] size-[1rem] mr-2"></span>Nuestra Historia</a>
+          <a href="../sobreNosotros/sobreNosotros.html#nuestraMisionVision" target="_blank" class="link link-hover"><span class="icon-[tabler--focus-2] size-[1rem] mr-2"></span>Nuestra Mision</a>
+          <a href="../sobreNosotros/sobreNosotros.html#nuestraMisionVision" target="_blank" class="link link-hover"><span class="icon-[tabler--eye] size-[1rem] mr-2"></span>Nuestra Vision</a>
+          <span>
+            <a href="../sobreNosotros/sobreNosotros.html#nuestrosObjetivos" target="_blank" class="link link-hover"><span class="icon-[tabler--focus] size-[1rem] mr-2"></span>Nuestro Objetivo</a>
+            <span class="badge ms-2 badge-sm badge-primary">Nuevo</span>
+          </span>
+          <span>
+            <a href="../sobreNosotros/sobreNosotros.html#nuestrosValores" target="_blank" class="link link-hover"><span class="icon-[tabler--diamond] size-[1rem] mr-2"></span>Nuestros Valores</a>
+            <span class="badge ms-2 badge-sm badge-primary">Nuevo</span>
+          </span>
+        </nav>
+        <nav class="text-base-content/90">
+          <h6 class="footer-title">Nuestras Ediciones</h6>
+          <a href="../revistaTrayectos/primeraEdicion.html" target="_blank" class="link link-hover"><span class="icon-[tabler--book] size-[1rem] mr-2"></span>Primera Edicion</a>
+          <a href="../revistaTrayectos/todasEdiciones.html" target="_blank" class="link link-hover"><span class="icon-[tabler--books] size-[1rem] mr-2"></span>Todas las ediciones</a>
+          <a href="../revistaTrayectos/ultimaEdicion.html" target="_blank" class="link link-hover"><span class="icon-[tabler--book-2] size-[1rem] mr-2"></span>Ultima Edicion</a>
+        </nav>
+        <nav class="text-base-content/90">
+          <h6 class="footer-title">Legal</h6>
+          <a href="../legales/cookies.html" target="_blank" class="link link-hover"><span class="icon-[tabler--cookie] size-[1rem] mr-2"></span>Politica de Cookies</a>
+          <a href="../legales/privacidad.html" target="_blank" class="link link-hover"><span class="icon-[tabler--lock] size-[1rem] mr-2"></span>Politica de Privacidad</a>
+          <a href="../legales/condiciones.html" target="_blank" class="link link-hover"><span class="icon-[tabler--gavel] size-[1rem] mr-2"></span>Condiciones de Uso Legal Web</a>
+        </nav>
+      </footer>
+      <footer class="footer bg-base-200/60 border-base-content/25 border-t px-6 py-4">
+        <div class="flex w-full items-center justify-between">
+          <aside class="grid-flow-col items-center">
+            <p>
+              <a class="link link-hover font-medium ml-2" href="../../src/index.html">Revista Trayectos   |</a>
+               © Todos los derechos reservados 2024
+            </p>
+          </aside>
+          <div class="flex h-5 gap-4">
+            <a href="https://www.facebook.com/" target="_blank" class="link" aria-label="Facebook Link">
+              <span class="icon-[tabler--brand-facebook] size-5"></span>
+            </a>
+            <a href="https://www.instagram.com/" target="_blank" class="link" aria-label="Instagram Link">
+              <span class="icon-[tabler--brand-instagram] size-5"></span>
+            </a>
+            <a href="https://x.com/" target="_blank" class="link" aria-label="X Link">
+              <span class="icon-[tabler--brand-x] size-5"></span>
+            </a>
+            <a href="https://www.linkedin.com/" target="_blank" class="link" aria-label="LinkedIn Link">
+              <span class="icon-[tabler--brand-linkedin] size-5"></span>
+            </a>
+            <a href="https://www.youtube.com/" target="_blank" class="link" aria-label="Youtube Link">
+              <span class="icon-[tabler--brand-youtube] size-5"></span>
+            </a>
+          </div>
+        </div>
+      </footer>
+    </div>
+    <script src="../../js/flyonui.js"></script>
+    <script src="../../js/accordion.js"></script> 
+  </body>
 </html>

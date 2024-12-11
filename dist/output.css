@@ -1169,6 +1169,10 @@ html {
   width: 800px; /** Tamaño arreglado de los acordeones */
 }
 
+.acordeonTamañoNuevo {
+  width: 600px;
+}
+
 :where(.btn:is(input[type="checkbox"])),
 :where(.btn:is(input[type="radio"])) {
   width: auto;
