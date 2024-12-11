@@ -1560,10 +1560,14 @@ html {
   border-width: 1px;
   border-color: var(--fallback-bc,oklch(var(--bc)/0.4));
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: #07122c;
   color: var(--fallback-bc,oklch(var(--bc)/0.8));
   transition: border-color 0.15s ease-in-out,
     box-shadow 0.15s ease-in-out;
+}
+
+.form-width {
+  width: 350px;
 }
 
 .input::file-selector-button {
@@ -2097,7 +2101,7 @@ html {
   margin-bottom: 0.5rem;
   border-radius: var(--rounded-box, 0.5rem);
   --tw-bg-opacity: 1;
-  background-color: var(--fallback-b1,oklch(var(--b1)/var(--tw-bg-opacity)));
+  background-color: transparent;
   --tw-shadow: 0 4px 6px -1px var(--fallback-bs,oklch(var(--bs)/0.2));
   --tw-shadow-colored: 0 4px 6px -1px var(--tw-shadow-color);
   box-shadow: var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow);
